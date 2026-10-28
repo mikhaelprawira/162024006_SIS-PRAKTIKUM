@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import '../models/drink.dart';
 import 'drink_detail_page.dart';
+import 'add_product.dart'; 
 
 class HomePage extends StatefulWidget {
   final List<Drink> drinkList;
@@ -156,6 +156,19 @@ class _HomePageState extends State<HomePage> {
                   ),
           ),
         ],
+      ),
+      
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => AddProductPage(),
+            ),
+          );
+        },
+        backgroundColor: const Color(0xFFEADDFF), 
+        child: const Icon(Icons.add, color: Color(0xFF21005D)),
       ),
     );
   }
